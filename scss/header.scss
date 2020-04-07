@@ -1,0 +1,200 @@
+.header {
+  position: absolute;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.9);
+  padding-bottom: 20px;
+  @media (min-width: 992px) {
+    padding-bottom: 30px;
+  }
+  &__content {
+    display: flex;
+    @media (min-width: 992px) {
+      justify-content: space-between;
+    }
+    & .logos {
+      display: flex;
+      margin-top: 20px;
+      @media (min-width: 992px) {
+        margin-top: 40px;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 50px;
+      }
+      & .logo-myport {
+        display: block;
+        width: 124px;
+        height: 30px;
+        @media (min-width: 768px) {
+          width: 160px;
+          height: 40px;
+        }
+        @media (min-width: 1200px) {
+          width: 206px;
+          height: 50px;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & .logo-ros {
+        display: block;
+        width: 124px;
+        height: 30px;
+        margin-left: 26px;
+        @media (min-width: 768px) {
+          width: 160px;
+          height: 40px;
+        }
+        @media (min-width: 1200px) {
+          width: 206px;
+          height: 50px;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.header__mobile {
+  display: block;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  &__btn {
+    position: absolute;
+    right: 35px;
+    top: 26px;
+    background-color: inherit;
+    border: none;
+    height: 16px;
+    width: 30px;
+    z-index: 99;
+    @media (min-width: 768px) {
+      top: 32px;
+    }
+    & span {
+      padding: 0;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      display: block;
+      transition: all 0.3s ease;
+      position: absolute;
+      &:first-child {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:last-child {
+        top: 16px;
+      }
+    }
+    &.active {
+      & span {
+        &:first-child {
+          transform: rotate(45deg);
+          top: 10px;
+        }
+        &:nth-child(2) {
+          transform: translateX(40px);
+          background-color: transparent;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 10px;
+        }
+      }
+    }
+  }
+  &__nav {
+    position: fixed;
+    transform: translateX(600px);
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    & ul {
+      margin-left: 10px;
+      margin-top: 120px;
+      & li {
+        margin-top: 10px;
+        @media (min-width: 768px) {
+          margin-top: 20px;
+        }
+        & a {
+          font-family: "MullerBold";
+          font-size: 12px;
+          line-height: 17px;
+          text-transform: uppercase;
+          color: #1d6098;
+          @media (min-width: 768px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    &.active {
+      transform: translateX(0px);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.header__desktop {
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    margin-top: 50px;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 75px;
+  }
+  & ul {
+    display: flex;
+    & li {
+      position: relative;
+      margin-left: 15px;
+      z-index: 2;
+      &:before {
+        content: "";
+        background-image: url("../img/header/bgli.png");
+        background-size: 120% 100%;
+        position: absolute;
+        display: none;
+        top: 0;
+        left: -8%;
+        width: 110%;
+        height: 100%;
+        z-index: -1;
+      }
+      & a {
+        font-family: "MullerBold";
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #1d6098;
+        @media (min-width: 1200px) {
+          font-size: 17px;
+        }
+      }
+      &:hover {
+        &:before {
+          display: block;
+        }
+        & a {
+          color: white;
+        }
+      }
+    }
+  }
+}
