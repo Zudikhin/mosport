@@ -1,0 +1,178 @@
+.footer {
+  background-image: url(../img/footer/bg.png);
+  background-size: cover;
+  background-position: 55% 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 140px;
+  @media (min-width: 992px) {
+    padding-bottom: 10px;
+  }
+  &__logo {
+    margin-top: 60px;
+  }
+  &__content {
+    position: relative;
+    margin-top: 50px;
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #ffffff;
+      opacity: 0.5;
+      position: absolute;
+      top: -25px;
+      left: 0;
+    }
+    & .text {
+      & p {
+        font-family: "MullerMedium";
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        padding-right: 10px;
+      }
+      @media (min-width: 992px) {
+        width: 250px;
+      }
+      @media (min-width: 1200px) {
+        width: 256px;
+      }
+    }
+    & .map {
+      margin-top: 40px;
+      @media (min-width: 992px) {
+        margin-top: 17px;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+      & ul {
+        margin-top: 20px;
+        @media (min-width: 768px) {
+          display: flex;
+        }
+        @media (min-width: 992px) {
+          flex-direction: column;
+        }
+        & li {
+          margin-top: 12px;
+          @media (min-width: 768px) {
+            margin-right: 20px;
+          }
+          @media (min-width: 992px) {
+            margin-right: 0px;
+            margin-top: 5px;
+          }
+          & a {
+            font-family: "MullerMedium";
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    & .help {
+      margin-top: 40px;
+      @media (min-width: 992px) {
+        margin-top: 17px;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+      & ul {
+        margin-top: 20px;
+        @media (min-width: 768px) {
+          display: flex;
+        }
+        @media (min-width: 992px) {
+          flex-direction: column;
+        }
+        & li {
+          margin-top: 12px;
+          @media (min-width: 768px) {
+            margin-right: 20px;
+          }
+          @media (min-width: 992px) {
+            margin-right: 0px;
+            margin-top: 5px;
+          }
+          & a {
+            font-family: "MullerMedium";
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    & .address {
+      margin-top: 40px;
+      @media (min-width: 992px) {
+        margin-top: 17px;
+      }
+      & p {
+        font-family: "MullerMedium";
+        font-size: 20px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+          flex-direction: row;
+          margin-top: 30px;
+        }
+        @media (min-width: 992px) {
+          flex-direction: column;
+          margin-top: 20px;
+        }
+        & a {
+          font-family: "MullerRegular";
+          font-size: 16px;
+          line-height: 16px;
+          color: #ffffff;
+          margin-top: 12px;
+          @media (min-width: 768px) {
+            margin-top: 0px;
+            margin-left: 20px;
+          }
+          @media (min-width: 992px) {
+            margin-left: 0px;
+            margin-top: 16px;
+          }
+        }
+        & span {
+          width: 236px;
+          margin-top: 20px;
+          @media (min-width: 768px) {
+            margin-top: 0px;
+          }
+          & a {
+            font-family: "MullerBold";
+            font-size: 16px;
+            line-height: 16px;
+            color: #ffffff;
+            @media (min-width: 768px) {
+              margin-left: 0px;
+            }
+            @media (min-width: 992px) {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
