@@ -14,6 +14,13 @@ $(document).ready(function () {
     }
   });
 
+  $(".friends__content").scroll(function () {
+    var clientHeight = $(this)[0].clientHeight;
+    var scrollTop = $(this)[0].scrollTop;
+    var scrolled = ((scrollTop / clientHeight) * 100) / 2.6;
+    $("#myBar").css("width", scrolled + "%");
+  });
+
   $(".modal").click(function () {
     $(this).css("display", "none");
     $(".header__mobile__nav").removeClass("active");
