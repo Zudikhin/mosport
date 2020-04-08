@@ -22,6 +22,28 @@
   font-weight: normal;
 }
 @font-face {
+  font-family: "MullerRegular";
+  src: url("../fonts/MullerRegular.eot");
+  src: url("../fonts/MullerRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff"),
+    url("../fonts/MullerRegular.ttf") format("truetype"),
+    url("../fonts/MullerRegular.svg#MullerRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MullerMedium";
+  src: url("../fonts/MullerMedium.eot");
+  src: url("../fonts/MullerMedium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerMedium.woff2") format("woff2"),
+    url("../fonts/MullerMedium.woff") format("woff"),
+    url("../fonts/MullerMedium.ttf") format("truetype"),
+    url("../fonts/MullerMedium.svg#MullerMedium") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "MullerMedium";
   src: url("../fonts/MullerMedium.eot");
   src: url("../fonts/MullerMedium.eot?#iefix") format("embedded-opentype"),

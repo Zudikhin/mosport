@@ -20,4 +20,12 @@ $(document).ready(function () {
     $(".header__mobile__btn").removeClass("active");
     $("body").css("overflow", "auto");
   });
+
+  $(".news__slider").slick({
+    prevArrow: $(".news__slider-prev"),
+    nextArrow: $(".news__slider-next"),
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+  });
 });
