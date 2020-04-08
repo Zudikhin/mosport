@@ -27,5 +27,45 @@ $(document).ready(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 2000,
+        settings: {
+          variableWidth: true,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false,
+          centerMode: false,
+        },
+      },
+    ],
+  });
+
+  $(".about__slider").slick({
+    prevArrow: $(".about__slider-prev"),
+    nextArrow: $(".about__slider-next"),
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 2000,
+        settings: {
+          variableWidth: true,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false,
+          centerMode: false,
+        },
+      },
+    ],
   });
 });

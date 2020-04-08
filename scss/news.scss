@@ -8,7 +8,7 @@
 .news__top {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 44px;
   & h3 {
     color: #ffffff;
   }
@@ -38,8 +38,11 @@
   margin-top: 17px;
   padding-bottom: 80px;
   @media (min-width: 576px) {
-    width: 380px;
-    height: 320px;
+    margin-top: 30px;
+  }
+  @media (min-width: 992px) {
+    margin-top: 42px;
+    padding-bottom: 40px;
   }
   & .news__item {
     width: 360px;
@@ -52,6 +55,21 @@
       width: 380px;
       height: 320px;
     }
+    @media (min-width: 768px) {
+      margin: 0px 10px;
+    }
+    @media (min-width: 992px) {
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        & .img {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
     &:before {
       content: "";
       width: 100%;
@@ -63,11 +81,34 @@
       z-index: -1;
       opacity: 1;
       transition: all 0.3s ease;
+      @media (min-width: 768px) {
+        opacity: 0;
+      }
     }
     & .img {
       width: 100%;
       height: 100%;
       position: relative;
+      @media (min-width: 768px) {
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: linear-gradient(
+              180deg,
+              rgba(195, 82, 223, 0.65) 0%,
+              rgba(216, 65, 0, 0.45) 100%
+            ),
+            linear-gradient(
+              0deg,
+              rgba(51, 51, 51, 0.0810479),
+              rgba(51, 51, 51, 0.0810479)
+            );
+        }
+      }
       & img {
         width: 100%;
         height: 100%;
@@ -78,6 +119,12 @@
       left: 10px;
       bottom: 14px;
       padding-right: 20px;
+      @media (min-width: 992px) {
+        bottom: 40px;
+        left: 18px;
+        display: flex;
+        align-items: flex-end;
+      }
       & p {
         font-family: "MullerRegular";
         color: #ffffff;
@@ -95,17 +142,43 @@
   }
 }
 
-// .news__slider {
-//   & .slick-active {
-//     & .news__item {
-//       &:before {
-//         opacity: 1;
-//       }
-//       & .img {
-//         &::after {
-//           display: none;
-//         }
-//       }
-//     }
-//   }
-// }
+.news__slider {
+  @media (min-width: 768px) {
+    & .slick-active {
+      & .news__item {
+        &::before {
+          opacity: 1;
+        }
+        & .img {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    & .slick-active {
+      & .news__item {
+        &::before {
+          opacity: 0;
+        }
+        & .img {
+          &::after {
+            display: block;
+          }
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+          & .img {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
