@@ -31,7 +31,7 @@ $(document).ready(function () {
   swiper.on("slideChange", function () {
     var dropProgress = $(this)[0].progress;
     var progress = dropProgress * 100;
-    if (progress < 11) {
+    if (progress < 20) {
       $(".bar").css("width", 20 + "%");
       $("#friends_ship").css("left", 10 + "%");
     } else if (progress > 89) {
@@ -43,39 +43,28 @@ $(document).ready(function () {
     }
   });
 
-  // direction: 'horizontal',
-  // 	loop: false,
-  // 	slidesPerView:'auto',
-  // 	spaceBetween: 0,
-  // 	freeMode: true,
-  // 	freeModeSticky: true,
-  // 	freeModeMomentum: true,
-  // 	mousewheel: {
-  //     releaseOnEdges: true
-  // 	},
-  // 	grabCursor: true,
-  // 	keyboard: {
-  // 	  enabled: true,
-  // 	},
-  //   })
+  $(".main__item").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        background: "url(" + $(this).data("bg") + ")",
+        "background-position": "50% 0%",
+        "background-repeat": "no-repeat",
+        "background-size": "cover",
+      });
+    }
+  });
 
-  // var lastScrollTop = 0;
-  // $(".swiper-container").scroll(function (event) {
-  //   var st = $(this).scrollTop();
-  //   if (st > lastScrollTop) {
-  //     $(".swiper-button-prev").click();
-  //   } else {
-  //     $(".swiper-button-next").click();
-  //   }
-  //   lastScrollTop = st;
-  // });
-
-  // $(".friends__content").scroll(function () {
-  //   var clientHeight = $(this)[0].scrollHeight;
-  //   var scrollTop = $(this)[0].scrollTop;
-  //   var scrolled = (scrollTop / clientHeight) * 100;
-  //   $("#myBar").css("width", scrolled + "%");
-  // });
+  $(".main__slider").slick({
+    infinite: true,
+    autoplay: false,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    dots: true,
+    customPaging: function (slider, i) {
+      return '<a class="dot"></a>';
+    },
+  });
 
   $(".modal").click(function () {
     $(this).css("display", "none");

@@ -1,5 +1,107 @@
 .main {
-  height: 600px;
-  width: 100%;
-  background-color: yellow;
+  position: relative;
+  &__item {
+    height: 100vh;
+    position: relative;
+    & h2 {
+      position: absolute;
+      bottom: 70px;
+      font-size: 26px;
+      line-height: 30px;
+      text-align: center;
+      color: #fafafa;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (min-width: 576px) {
+        width: 500px;
+        font-size: 30px;
+      }
+      @media (min-width: 768px) {
+        font-size: 40px;
+        line-height: 40px;
+        width: 800px;
+      }
+      @media (min-width: 992px) {
+        font-size: 50px;
+        line-height: 50px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 60px;
+        line-height: 60px;
+      }
+      & span {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 11px;
+        }
+        &:first-child {
+          &:before {
+            width: 340px;
+            background-image: url(../img/main/line-2.svg);
+          }
+        }
+        &:nth-child(2) {
+          &::before {
+            width: 300px;
+            background-image: url(../img/main/line.svg);
+          }
+        }
+        &:last-child {
+          &::before {
+            width: 130px;
+            background-image: url(../img/main/line-1.svg);
+          }
+        }
+      }
+    }
+  }
+  & .slick-prev {
+    display: none !important;
+  }
+  & .slick-next {
+    display: none !important;
+  }
+  & .slick-dots {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    & li {
+      margin-top: 15px;
+      width: 22px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px 0px 0px 2px;
+      display: block;
+      position: absolute;
+      right: 0;
+      &:first-child {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 15px;
+      }
+      &:nth-child(3) {
+        top: 30px;
+      }
+      &:last-child {
+        top: 45px;
+      }
+      & a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .slick-active {
+      width: 36px;
+      transition: all 0.3s ease;
+    }
+  }
 }
