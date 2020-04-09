@@ -32,13 +32,14 @@ $(document).ready(function () {
     var dropProgress = $(this)[0].progress;
     var progress = dropProgress * 100;
     if (progress < 11) {
-      $(".bar").css("width", 10 + "%");
+      $(".bar").css("width", 20 + "%");
       $("#friends_ship").css("left", 10 + "%");
     } else if (progress > 89) {
       $(".bar").css("width", 100 + "%");
+      $("#friends_ship").css("left", 90 + "%");
     } else {
       $(".bar").css("width", progress + "%");
-      $("#friends_ship").css("left", progress + "%");
+      $("#friends_ship").css("left", progress - 10 + "%");
     }
   });
 
