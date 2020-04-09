@@ -2,25 +2,7 @@
   background-image: url(../img/friends/bg.png);
 }
 .swiper-container {
-  height: 300px;
-}
-
-.swiper-container-vertical > .swiper-scrollbar {
-  position: absolute;
-  left: 50%;
-  top: 150px;
-  z-index: 50;
-  width: 5px;
-  height: 98%;
-  transform: rotate(-90deg);
-  opacity: 1 !important;
-}
-.swiper-container-horizontal
-  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
-.swiper-container-vertical > .swiper-pagination-progressbar {
-  transform: rotate(-90deg);
-  left: 50%;
-  top: 150px;
+  height: 380px;
 }
 
 .progress {
@@ -28,14 +10,30 @@
   height: 20px;
   background-color: red;
   transition: all 0.3s ease;
+  margin-top: 50px;
 }
 
 .swiper-slide {
+  height: auto;
   & h4 {
     font-family: "times-new-roman";
     font-size: 36px;
     line-height: 41px;
     color: #1c1c1c;
     font-weight: bold;
+    margin-top: 50px;
+  }
+  & span {
+    font-size: 16px;
+    line-height: 22px;
+    color: #1c1c1c;
+    margin-top: 19px;
+  }
+  & p {
+    font-family: "MullerRegular";
+    font-size: 16px;
+    line-height: 22px;
+    color: #1c1c1c;
+    margin-top: 20px;
   }
 }

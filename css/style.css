@@ -349,14 +349,6 @@ template, [hidden] {
 }
 
 @font-face {
-  font-family: "MullerMedium";
-  src: url("../fonts/MullerMedium.eot");
-  src: url("../fonts/MullerMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.ttf") format("truetype"), url("../fonts/MullerMedium.svg#MullerMedium") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "Qanelas-SemiBold";
   src: url("../fonts/Qanelas-SemiBold.eot");
   src: url("../fonts/Qanelas-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Qanelas-SemiBold.woff2") format("woff2"), url("../fonts/Qanelas-SemiBold.woff") format("woff"), url("../fonts/Qanelas-SemiBold.ttf") format("truetype"), url("../fonts/Qanelas-SemiBold.svg#Qanelas-SemiBold") format("svg");
@@ -1326,28 +1318,7 @@ div:focus {
 }
 
 .swiper-container {
-  height: 300px;
-}
-
-.swiper-container-vertical > .swiper-scrollbar {
-  position: absolute;
-  left: 50%;
-  top: 150px;
-  z-index: 50;
-  width: 5px;
-  height: 98%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  opacity: 1 !important;
-}
-
-.swiper-container-horizontal
-> .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
-.swiper-container-vertical > .swiper-pagination-progressbar {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  left: 50%;
-  top: 150px;
+  height: 380px;
 }
 
 .progress {
@@ -1356,6 +1327,11 @@ div:focus {
   background-color: red;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-slide h4 {
@@ -1364,6 +1340,22 @@ div:focus {
   line-height: 41px;
   color: #1c1c1c;
   font-weight: bold;
+  margin-top: 50px;
+}
+
+.swiper-slide span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #1c1c1c;
+  margin-top: 19px;
+}
+
+.swiper-slide p {
+  font-family: "MullerRegular";
+  font-size: 16px;
+  line-height: 22px;
+  color: #1c1c1c;
+  margin-top: 20px;
 }
 
 .footer {
