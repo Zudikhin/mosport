@@ -15,6 +15,12 @@
   height: 400px;
   overflow-y: scroll;
   scrollbar-width: none;
+  & p {
+    display: block;
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .friends__content::-webkit-scrollbar {
@@ -23,4 +29,9 @@
 
 .friends__content {
   -ms-overflow-style: none;
+}
+
+.swiper-container {
+  height: 300px;
+  width: 400px;
 }

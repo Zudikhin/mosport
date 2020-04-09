@@ -14,12 +14,68 @@ $(document).ready(function () {
     }
   });
 
-  $(".friends__content").scroll(function () {
-    var clientHeight = $(this)[0].clientHeight;
-    var scrollTop = $(this)[0].scrollTop;
-    var scrolled = ((scrollTop / clientHeight) * 100) / 2.6;
-    $("#myBar").css("width", scrolled + "%");
+  var swiper = new Swiper(".swiper-container", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    mousewheel: true,
   });
+
+  // $(".slick_slider").slick({
+  //   dots: false,
+  //   vertical: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   verticalSwiping: true,
+  //   infinite: false,
+  //   prevArrow: false,
+  //   nextArrow: false,
+  // });
+
+  // function mouseWheel(slider) {
+  //   $(".slick_slider".on('wheel', { slider: slider }, mouseWheelHandler)
+  // }
+  // function mouseWheelHandler(event) {
+  //   event.preventDefault()
+  //   const $slider = event.data.$slider
+  //   const delta = event.originalEvent.deltaY
+  //   if(delta > 0) {
+  //     $slider.slick('slickPrev')
+  //   }
+  //   else {
+  //     $slider.slick('slickNext')
+  //   }
+  // }
+
+  // $(".friends__content").scroll(function (event) {
+
+  //   console.log($(this).scrollTop());
+  // });
+
+  // var lastScrollTop = 0;
+  // $(".friends__content").scroll(function (event) {
+  //   var st = $(this).scrollTop();
+  //   if (st > lastScrollTop) {
+  //     $(this)
+  //       .children()
+  //       .each(function (index, element) {
+  //         console.log(element);
+  //       });
+  //   } else {
+  //     console.log("scroll vverh");
+  //   }
+  //   lastScrollTop = st;
+  // });
+
+  // $(".friends__content").scroll(function () {
+  //   var clientHeight = $(this)[0].scrollHeight;
+  //   var scrollTop = $(this)[0].scrollTop;
+  //   var scrolled = (scrollTop / clientHeight) * 100;
+  //   $("#myBar").css("width", scrolled + "%");
+  // });
 
   $(".modal").click(function () {
     $(this).css("display", "none");

@@ -1340,12 +1340,25 @@ div:focus {
   scrollbar-width: none;
 }
 
+.friends__content p {
+  display: block;
+}
+
+.friends__content p.active {
+  display: block;
+}
+
 .friends__content::-webkit-scrollbar {
   display: none;
 }
 
 .friends__content {
   -ms-overflow-style: none;
+}
+
+.swiper-container {
+  height: 300px;
+  width: 400px;
 }
 
 .footer {
