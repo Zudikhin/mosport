@@ -56,7 +56,10 @@ $(document).ready(function () {
 
   $(".main__slider").slick({
     infinite: true,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    pauseOnHover: false,
+    pauseOnFocus: false,
     speed: 500,
     fade: true,
     cssEase: "linear",
@@ -77,6 +80,10 @@ $(document).ready(function () {
     prevArrow: $(".news__slider-prev"),
     nextArrow: $(".news__slider-next"),
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    pauseOnHover: false,
+    pauseOnFocus: false,
     speed: 300,
     slidesToShow: 1,
     responsive: [
@@ -102,6 +109,10 @@ $(document).ready(function () {
     nextArrow: $(".about__slider-next"),
     infinite: true,
     speed: 300,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    pauseOnHover: false,
+    pauseOnFocus: false,
     slidesToShow: 1,
     responsive: [
       {

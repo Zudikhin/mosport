@@ -7,13 +7,20 @@
       position: absolute;
       bottom: 70px;
       font-size: 26px;
+      width: 100%;
       line-height: 30px;
       text-align: center;
       color: #fafafa;
       left: 50%;
       transform: translateX(-50%);
+      text-shadow: 0px 0px 0 rgb(4, 135, 175), -1px 1px 0 rgb(4, 135, 175),
+        -2px 2px 0 rgb(4, 135, 175), -3px 3px 2px rgba(0, 0, 0, 1),
+        -3px 3px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.2);
+      @media (min-width: 412px) {
+        padding: 0px 20px;
+      }
       @media (min-width: 576px) {
-        width: 500px;
+        width: 100%;
         font-size: 30px;
       }
       @media (min-width: 768px) {
@@ -24,6 +31,7 @@
       @media (min-width: 992px) {
         font-size: 50px;
         line-height: 50px;
+        width: 100%;
       }
       @media (min-width: 1200px) {
         font-size: 60px;
@@ -32,30 +40,63 @@
       & span {
         display: block;
         position: relative;
-        margin-top: 10px;
+        margin-top: 20px;
+        @media (min-width: 576px) {
+          margin-top: 30px;
+        }
+        @media (min-width: 1200px) {
+          margin-top: 40px;
+        }
         &:before {
           content: "";
           position: absolute;
-          bottom: -5px;
+          bottom: -10px;
           left: 50%;
           transform: translateX(-50%);
           height: 11px;
+          @media (min-width: 992px) {
+            bottom: -12px;
+          }
         }
         &:first-child {
           &:before {
-            width: 340px;
+            width: 210px;
             background-image: url(../img/main/line-2.svg);
+            @media (min-width: 576px) {
+              width: 250px;
+            }
+            @media (min-width: 768px) {
+              width: 340px;
+            }
+            @media (min-width: 992px) {
+              width: 420px;
+            }
+            @media (min-width: 992px) {
+              width: 420px;
+            }
           }
         }
         &:nth-child(2) {
           &::before {
-            width: 300px;
+            width: 220px;
             background-image: url(../img/main/line.svg);
+            @media (min-width: 452px) {
+              width: 300px;
+            }
+            @media (min-width: 576px) {
+              width: 340px;
+            }
+            @media (min-width: 768px) {
+              width: 420px;
+            }
+            @media (min-width: 992px) {
+              width: 520px;
+            }
           }
         }
         &:last-child {
           &::before {
-            width: 130px;
+            width: 100px;
             background-image: url(../img/main/line-1.svg);
           }
         }

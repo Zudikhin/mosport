@@ -45,12 +45,16 @@
     padding-bottom: 40px;
   }
   & .about__item {
-    width: 360px;
-    height: 300px;
+    width: 320px;
+    height: 280px;
     position: relative;
     margin: 0 auto;
     display: block;
     padding-bottom: 10px;
+    @media (min-width: 380px) {
+      width: 360px;
+      height: 300px;
+    }
     @media (min-width: 576px) {
       width: 380px;
       height: 320px;

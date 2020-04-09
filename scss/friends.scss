@@ -17,6 +17,9 @@
     height: 230px;
   }
   @media (min-width: 992px) {
+    margin-top: 100px;
+  }
+  @media (min-width: 1200px) {
     margin-top: 170px;
   }
 }
@@ -79,6 +82,14 @@
 .friends__img {
   width: 100%;
   margin-top: 60px;
+  @media (min-width: 768px) {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  @media (min-width: 992px) {
+    width: auto;
+  }
   & img {
     width: 100%;
     @media (min-width: 992px) {
