@@ -31,12 +31,14 @@ $(document).ready(function () {
   swiper.on("slideChange", function () {
     var dropProgress = $(this)[0].progress;
     var progress = dropProgress * 100;
-    if (progress < 10) {
-      $(".progress").css("width", 10 + "%");
+    if (progress < 11) {
+      $(".bar").css("width", 10 + "%");
+      $("#friends_ship").css("left", 10 + "%");
     } else if (progress > 89) {
-      $(".progress").css("width", 100 + "%");
+      $(".bar").css("width", 100 + "%");
     } else {
-      $(".progress").css("width", progress + "%");
+      $(".bar").css("width", progress + "%");
+      $("#friends_ship").css("left", progress + "%");
     }
   });
 
