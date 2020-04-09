@@ -17,55 +17,52 @@ $(document).ready(function () {
   var swiper = new Swiper(".swiper-container", {
     direction: "vertical",
     slidesPerView: "auto",
+    mousewheel: true,
     freeMode: true,
     scrollbar: {
       el: ".swiper-scrollbar",
     },
-    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
   });
 
-  // $(".slick_slider").slick({
-  //   dots: false,
-  //   vertical: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   verticalSwiping: true,
-  //   infinite: false,
-  //   prevArrow: false,
-  //   nextArrow: false,
-  // });
+  swiper.on("slideChange", function () {
+    var dropProgress = $(this)[0].progress;
+    var progress = dropProgress * 100;
+    if (progress < 10) {
+      $(".progress").css("width", 10 + "%");
+    } else if (progress > 89) {
+      $(".progress").css("width", 100 + "%");
+    } else {
+      $(".progress").css("width", progress + "%");
+    }
+  });
 
-  // function mouseWheel(slider) {
-  //   $(".slick_slider".on('wheel', { slider: slider }, mouseWheelHandler)
-  // }
-  // function mouseWheelHandler(event) {
-  //   event.preventDefault()
-  //   const $slider = event.data.$slider
-  //   const delta = event.originalEvent.deltaY
-  //   if(delta > 0) {
-  //     $slider.slick('slickPrev')
-  //   }
-  //   else {
-  //     $slider.slick('slickNext')
-  //   }
-  // }
-
-  // $(".friends__content").scroll(function (event) {
-
-  //   console.log($(this).scrollTop());
-  // });
+  // direction: 'horizontal',
+  // 	loop: false,
+  // 	slidesPerView:'auto',
+  // 	spaceBetween: 0,
+  // 	freeMode: true,
+  // 	freeModeSticky: true,
+  // 	freeModeMomentum: true,
+  // 	mousewheel: {
+  //     releaseOnEdges: true
+  // 	},
+  // 	grabCursor: true,
+  // 	keyboard: {
+  // 	  enabled: true,
+  // 	},
+  //   })
 
   // var lastScrollTop = 0;
-  // $(".friends__content").scroll(function (event) {
+  // $(".swiper-container").scroll(function (event) {
   //   var st = $(this).scrollTop();
   //   if (st > lastScrollTop) {
-  //     $(this)
-  //       .children()
-  //       .each(function (index, element) {
-  //         console.log(element);
-  //       });
+  //     $(".swiper-button-prev").click();
   //   } else {
-  //     console.log("scroll vverh");
+  //     $(".swiper-button-next").click();
   //   }
   //   lastScrollTop = st;
   // });
