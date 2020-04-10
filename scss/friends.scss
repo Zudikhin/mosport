@@ -10,7 +10,7 @@
     }
   }
 }
-.swiper-container {
+.swiper-friends {
   height: 330px;
   margin-top: 50px;
   @media (min-width: 576px) {
@@ -55,7 +55,7 @@
   }
 }
 
-.swiper-slide {
+.friends-slide {
   height: auto;
   & h4 {
     font-family: "times-new-roman";

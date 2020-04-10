@@ -127,6 +127,9 @@
     z-index: 9;
     display: flex;
     justify-content: center;
+    @media (min-width: 768px) {
+      transform: translateX(1200px);
+    }
     & ul {
       margin-left: 10px;
       margin-top: 120px;

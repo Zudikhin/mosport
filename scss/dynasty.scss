@@ -1,0 +1,177 @@
+.dynasty {
+  background-color: #144589;
+  background-image: url("../img/dynasty/left_content/bg_icons.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  padding-bottom: 150px;
+  &__content {
+    & .name {
+      &__item {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          & span {
+            &:before {
+              display: block;
+            }
+          }
+        }
+        margin-top: 25px;
+        & img {
+          width: 100%;
+        }
+        & span {
+          position: absolute;
+          display: block;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0 auto;
+          font-family: "times-new-roman";
+          font-size: 17px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: #ffffff;
+          &:before {
+            content: "";
+            position: absolute;
+            background-image: url("../img/dynasty/left_content/bg_button.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 150%;
+            z-index: -1;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.family_two {
+  & span {
+    width: 200px;
+  }
+}
+.family_four {
+  & span {
+    width: 250px;
+  }
+}
+.family_five {
+  & span {
+    width: 320px;
+    &:before {
+      width: 110% !important;
+    }
+  }
+}
+.family_six {
+  & span {
+    width: 220px;
+  }
+}
+.family_nine {
+  & span {
+    width: 320px;
+    &:before {
+      width: 110% !important;
+    }
+  }
+}
+.family_ten {
+  & span {
+    width: 70px;
+  }
+}
+
+.modal-content {
+  background-color: #00b7c6;
+  //@function:  url(../img/dynasty/right_content/label.png);
+}
+
+.dynasty__slider {
+  width: 300px;
+  & .slick-next {
+    display: none !important;
+  }
+  & .slick-prev {
+    display: none !important;
+  }
+  & .slider-for {
+    & .item {
+      & img {
+        width: 300px;
+        height: 200px;
+      }
+      & .img {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-size: cover;
+          background: url(../img/dynasty/right_content/canats.svg);
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          z-index: 999;
+        }
+        & img {
+          width: 110%;
+          height: 78%;
+          transform: translate(0px, 20px);
+        }
+      }
+    }
+  }
+  & .slider-nav {
+    & .item {
+      & .img {
+        width: 50px;
+        height: 50px;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.dynasty__slider .slick-dots {
+  position: absolute;
+  bottom: 65px;
+  display: flex;
+  left: 55%;
+  transform: translateX(-50%);
+  & .slider-nav {
+    transform: translateX(-20px);
+    margin-top: 10px;
+  }
+  & li {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 10px;
+  }
+  & .slick-active {
+    background-color: #144589;
+  }
+}
+
+.swiper-dynasty-mobile {
+  height: 300px;
+}
+.dynasty-mobile-slide {
+  height: auto;
+}

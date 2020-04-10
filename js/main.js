@@ -6,15 +6,15 @@ $(document).ready(function () {
     $(".header__mobile__nav").toggleClass("active");
 
     if ($(".header__mobile__nav").hasClass("active")) {
-      $(".modal").css("display", "block");
+      $(".header__fake-modal").css("display", "block");
       $("body").css("overflow", "hidden");
     } else {
-      $(".modal").css("display", "none");
+      $(".header__fake-modal").css("display", "none");
       $("body").css("overflow", "auto");
     }
   });
 
-  var swiper = new Swiper(".swiper-container", {
+  var swiper = new Swiper(".swiper-friends", {
     direction: "vertical",
     slidesPerView: "auto",
     mousewheel: true,
@@ -69,7 +69,7 @@ $(document).ready(function () {
     },
   });
 
-  $(".modal").click(function () {
+  $(".header__fake-modal").click(function () {
     $(this).css("display", "none");
     $(".header__mobile__nav").removeClass("active");
     $(".header__mobile__btn").removeClass("active");
@@ -130,5 +130,56 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  $(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".slider-nav",
+  });
+  $(".slider-nav").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for",
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    customPaging: function (slider, i) {
+      return '<a class="dot"></a>';
+    },
+  });
+
+  var swiperModal = new Swiper(".swiper-dynasty-mobile", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    mousewheel: true,
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+  });
+
+  swiperModal.on("slideChange", function () {
+    console.log($(this)[0].isEnd);
+    console.log("po4emy ne rabotaet");
+
+    var dropProgress = $(this)[0].progress;
+    var progress = dropProgress * 100;
+    if (progress < 20) {
+      $(".bar-dynasty").css("width", 20 + "%");
+      $(".dynasty-img").css("left", 10 + "%");
+    } else if (progress > 89) {
+      $(".bar-dynasty").css("width", 100 + "%");
+      $(".ship-dynasty").css("left", 90 + "%");
+    } else {
+      $(".bar-dynasty").css("width", progress + "%");
+      $(".ship-dynasty").css("left", progress - 10 + "%");
+    }
   });
 });
