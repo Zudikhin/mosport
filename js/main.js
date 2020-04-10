@@ -166,14 +166,11 @@ $(document).ready(function () {
   });
 
   swiperModal.on("slideChange", function () {
-    console.log($(this)[0].isEnd);
-    console.log("po4emy ne rabotaet");
-
     var dropProgress = $(this)[0].progress;
     var progress = dropProgress * 100;
     if (progress < 20) {
       $(".bar-dynasty").css("width", 20 + "%");
-      $(".dynasty-img").css("left", 10 + "%");
+      $(".ship-dynasty").css("left", 10 + "%");
     } else if (progress > 89) {
       $(".bar-dynasty").css("width", 100 + "%");
       $(".ship-dynasty").css("left", 90 + "%");
@@ -181,5 +178,11 @@ $(document).ready(function () {
       $(".bar-dynasty").css("width", progress + "%");
       $(".ship-dynasty").css("left", progress - 10 + "%");
     }
+  });
+
+  $(".modal").on("shown.bs.modal", function (e) {
+    swiperModal.update();
+    $(".slider-for").resize();
+    $(".slider-nav").resize();
   });
 });
