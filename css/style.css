@@ -1779,10 +1779,6 @@ div:focus {
   width: 70px;
 }
 
-.modal-content {
-  background-color: #00b7c6;
-}
-
 .dynasty__slider {
   width: 300px;
 }
@@ -1836,13 +1832,19 @@ div:focus {
   height: 100%;
 }
 
+.slider-nav {
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  margin-top: 20px;
+}
+
 .dynasty__slider .slick-dots {
   position: absolute;
-  bottom: 65px;
+  bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: 55%;
+  left: 56%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1920,6 +1922,30 @@ div:focus {
   background-color: #1d6098;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.modal-content h4 {
+  font-family: "MullerBold";
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.modal-content .close {
+  margin-left: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.modal-content .close i {
+  font-size: 25px;
+  color: black;
+}
+
+.modal-content .close i:hover {
+  color: black;
 }
 
 .footer {

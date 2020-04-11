@@ -91,11 +91,6 @@
   }
 }
 
-.modal-content {
-  background-color: #00b7c6;
-  //@function:  url(../img/dynasty/right_content/label.png);
-}
-
 .dynasty__slider {
   width: 300px;
   & .slick-next {
@@ -147,11 +142,16 @@
     }
   }
 }
+
+.slider-nav {
+  transform: translateX(-25px);
+  margin-top: 20px;
+}
 .dynasty__slider .slick-dots {
   position: absolute;
-  bottom: 65px;
+  bottom: 70px;
   display: flex;
-  left: 55%;
+  left: 56%;
   transform: translateX(-50%);
   & .slider-nav {
     transform: translateX(-20px);
@@ -213,6 +213,29 @@
       top: 0;
       background-color: #1d6098;
       transition: all 0.3s ease;
+    }
+  }
+}
+
+.modal-content {
+  & h4 {
+    font-family: "MullerBold";
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 30px;
+  }
+  & .close {
+    margin-left: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    & i {
+      font-size: 25px;
+      color: black;
+      &:hover {
+        color: black;
+      }
     }
   }
 }

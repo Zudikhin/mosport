@@ -185,4 +185,15 @@ $(document).ready(function () {
     $(".slider-for").resize();
     $(".slider-nav").resize();
   });
+
+  $(".modal-content").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        background: "#00b7c6 url(" + $(this).data("bg") + ")",
+        "background-position": "100px bottom",
+        "background-repeat": "no-repeat",
+        "background-size": "100% 50%",
+      });
+    }
+  });
 });
