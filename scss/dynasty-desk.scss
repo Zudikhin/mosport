@@ -1,5 +1,8 @@
 .dynasty__desk {
-  display: flex;
+  display: none;
+  @media (min-width: 992px) {
+    display: flex;
+  }
   & .left__content {
     background-color: #144589;
     background-image: url("../img/dynasty/left_content/bg_icons.svg");

@@ -210,7 +210,6 @@ $(document).ready(function () {
     value.on("slideChange", function () {
       var dropProgress = $(this)[0].progress;
       var progress = dropProgress * 100;
-      console.log(progress);
       if (progress < 20) {
         $(".bar-dynasty").css("width", 20 + "%");
         $(".ship-dynasty").css("left", 10 + "%");

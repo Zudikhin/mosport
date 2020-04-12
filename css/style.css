@@ -2177,9 +2177,15 @@ div:focus {
 }
 
 .dynasty__desk {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .dynasty__desk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .dynasty__desk .left__content {
