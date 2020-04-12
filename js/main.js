@@ -140,60 +140,146 @@ $(document).ready(function () {
     asNavFor: ".slider-nav",
   });
   $(".slider-nav").slick({
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: ".slider-for",
     dots: true,
-    centerMode: true,
+    centerMode: false,
     focusOnSelect: true,
     customPaging: function (slider, i) {
       return '<a class="dot"></a>';
     },
   });
 
-  var swiperModal = new Swiper(".swiper-dynasty-mobile", {
-    direction: "vertical",
-    slidesPerView: "auto",
-    mousewheel: true,
-    freeMode: true,
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
+  var swiperDesk = [];
+
+  $(".swiper-dynasty-desk").each(function (index) {
+    var mySwiperDesk = new Swiper($(this)[0], {
+      direction: "vertical",
+      slidesPerView: "auto",
+      mousewheel: true,
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    });
+    swiperDesk.push(mySwiperDesk);
   });
 
-  swiperModal.on("slideChange", function () {
-    var dropProgress = $(this)[0].progress;
-    var progress = dropProgress * 100;
-    if (progress < 20) {
-      $(".bar-dynasty").css("width", 20 + "%");
-      $(".ship-dynasty").css("left", 10 + "%");
-    } else if (progress > 89) {
-      $(".bar-dynasty").css("width", 100 + "%");
-      $(".ship-dynasty").css("left", 90 + "%");
+  $.each(swiperDesk, function (index, value) {
+    value.on("slideChange", function () {
+      var dropProgress = $(this)[0].progress;
+      var progress = dropProgress * 100;
+      if (progress < 20) {
+        $(".bar-dynasty-desk").css("width", 20 + "%");
+        $(".ship-dynasty-desk").css("left", 10 + "%");
+      } else if (progress > 89) {
+        $(".bar-dynasty-desk").css("width", 100 + "%");
+        $(".ship-dynasty-desk").css("left", 90 + "%");
+      } else {
+        $(".bar-dynasty-desk").css("width", progress + "%");
+        $(".ship-dynasty-desk").css("left", progress - 10 + "%");
+      }
+    });
+  });
+
+  var SwiperModal = [];
+
+  $(".swiper-dynasty-mobile").each(function (index) {
+    var mySwiper = new Swiper($(this)[0], {
+      direction: "vertical",
+      slidesPerView: "auto",
+      mousewheel: true,
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    });
+    SwiperModal.push(mySwiper);
+  });
+
+  $.each(SwiperModal, function (index, value) {
+    value.on("slideChange", function () {
+      var dropProgress = $(this)[0].progress;
+      var progress = dropProgress * 100;
+      console.log(progress);
+      if (progress < 20) {
+        $(".bar-dynasty").css("width", 20 + "%");
+        $(".ship-dynasty").css("left", 10 + "%");
+      } else if (progress > 89) {
+        $(".bar-dynasty").css("width", 100 + "%");
+        $(".ship-dynasty").css("left", 90 + "%");
+      } else {
+        $(".bar-dynasty").css("width", progress + "%");
+        $(".ship-dynasty").css("left", progress - 10 + "%");
+      }
+    });
+  });
+
+  $(".description").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        background: "#00B7C6 url(" + $(this).data("bg") + ")",
+        "background-position": "right bottom",
+        "background-repeat": "no-repeat",
+        "background-size": "75% 60%",
+      });
+    }
+  });
+
+  $(".modal-content").each(function () {
+    if ($(window).width() <= 767) {
+      if ($(this).attr("data-bg")) {
+        $(this).css({
+          background: "#00b7c6 url(" + $(this).data("bg") + ")",
+          "background-position": "100px bottom",
+          "background-repeat": "no-repeat",
+          "background-size": "100% 50%",
+        });
+      }
     } else {
-      $(".bar-dynasty").css("width", progress + "%");
-      $(".ship-dynasty").css("left", progress - 10 + "%");
+      if ($(this).attr("data-bg")) {
+        $(this).css({
+          background: "#00b7c6 url(" + $(this).data("bg") + ")",
+          "background-position": "200px  400px",
+          "background-repeat": "no-repeat",
+          "background-size": "70% 50%",
+        });
+      }
     }
   });
 
   $(".modal").on("shown.bs.modal", function (e) {
-    swiperModal.update();
-    $(".slider-for").resize();
-    $(".slider-nav").resize();
+    $.each(SwiperModal, function (index, value) {
+      value.update();
+    });
+    $(".slider-for").slick("slickPrev");
+    $(".slider-nav").slick("slickPrev");
   });
 
-  $(".modal-content").each(function () {
-    if ($(this).attr("data-bg")) {
-      $(this).css({
-        background: "#00b7c6 url(" + $(this).data("bg") + ")",
-        "background-position": "100px bottom",
-        "background-repeat": "no-repeat",
-        "background-size": "100% 50%",
-      });
-    }
+  $(".name__family").click(function () {
+    $(".name__family").removeClass("active");
+    $(this).addClass("active");
+    var data = $(this).attr("data-target");
+    $(".description").each(function (index, element) {
+      if (data == element.id) {
+        $(".description").css("display", "none");
+        $(`#${element.id}`).css("display", "block");
+        $.each(swiperDesk, function (index, value) {
+          value.update();
+          value.slideTo(1);
+        });
+        $(".slider-for").slick("slickPrev");
+        $(".slider-nav").slick("slickPrev");
+      }
+    });
   });
 });

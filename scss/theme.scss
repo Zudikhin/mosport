@@ -4,6 +4,7 @@
     margin-top: 50px;
   }
   & .item {
+    display: block;
     width: 300px;
     margin: 0 auto;
     margin-top: 40px;
@@ -51,6 +52,7 @@
         color: #333333;
       }
       & .last {
+        color: black;
         font-size: 18px;
         margin-top: 6px;
       }

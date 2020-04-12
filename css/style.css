@@ -955,6 +955,7 @@ div:focus {
 }
 
 .theme .item {
+  display: block;
   width: 300px;
   margin: 0 auto;
   margin-top: 40px;
@@ -1017,6 +1018,7 @@ div:focus {
 }
 
 .theme .item .name .last {
+  color: black;
   font-size: 18px;
   margin-top: 6px;
 }
@@ -1701,10 +1703,79 @@ div:focus {
   padding-bottom: 150px;
 }
 
+@media (min-width: 400px) {
+  .dynasty {
+    padding-bottom: 200px;
+  }
+}
+
+@media (min-width: 576px) {
+  .dynasty {
+    padding-bottom: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty {
+    padding-bottom: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dynasty {
+    display: none;
+  }
+}
+
+.dynasty__content {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+@media (min-width: 400px) {
+  .dynasty__content {
+    width: 370px;
+  }
+}
+
+.dynasty__content h3 {
+  font-family: "Qanelas-SemiBold";
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.dynasty__content h3:after {
+  content: "";
+  width: 158px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+
+.dynasty__content p {
+  font-family: "MullerRegular";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
 .dynasty__content .name__item {
   position: relative;
   cursor: pointer;
   margin-top: 25px;
+}
+
+@media (min-width: 400px) {
+  .dynasty__content .name__item {
+    width: 370px;
+  }
 }
 
 .dynasty__content .name__item:hover span:before {
@@ -1783,6 +1854,18 @@ div:focus {
   width: 300px;
 }
 
+@media (min-width: 400px) {
+  .dynasty__slider {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty__slider {
+    width: 380px;
+  }
+}
+
 .dynasty__slider .slick-next {
   display: none !important;
 }
@@ -1800,6 +1883,20 @@ div:focus {
   width: 300px;
   height: 200px;
   position: relative;
+}
+
+@media (min-width: 400px) {
+  .dynasty__slider .slider-for .item .img {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty__slider .slider-for .item .img {
+    width: 100%;
+    height: 270px;
+  }
 }
 
 .dynasty__slider .slider-for .item .img:before {
@@ -1822,9 +1919,61 @@ div:focus {
           transform: translate(0px, 20px);
 }
 
+@media (min-width: 400px) {
+  .dynasty__slider .slider-for .item .img img {
+    height: 71%;
+    -webkit-transform: translate(0px, 37px);
+            transform: translate(0px, 37px);
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty__slider .slider-for .item .img img {
+    width: 100%;
+  }
+}
+
+.dynasty__slider .slider-nav {
+  max-width: 180px;
+  margin-left: 90px;
+}
+
+@media (min-width: 400px) {
+  .dynasty__slider .slider-nav {
+    margin-left: 115px;
+  }
+}
+
+@media (min-width: 576px) {
+  .dynasty__slider .slider-nav {
+    margin-left: 0px;
+    margin-top: 20px;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    width: 250px;
+    right: -330px;
+    top: -180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty__slider .slider-nav {
+    max-width: 180px;
+    right: -350px;
+    top: -195px;
+  }
+}
+
 .dynasty__slider .slider-nav .item .img {
   width: 50px;
   height: 50px;
+}
+
+@media (min-width: 576px) {
+  .dynasty__slider .slider-nav .item .img {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
 }
 
 .dynasty__slider .slider-nav .item .img img {
@@ -1840,13 +1989,25 @@ div:focus {
 
 .dynasty__slider .slick-dots {
   position: absolute;
-  bottom: 70px;
+  bottom: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: 56%;
+  left: 44%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (min-width: 576px) {
+  .dynasty__slider .slick-dots {
+    left: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  .dynasty__slider .slick-dots {
+    bottom: 65px;
+  }
 }
 
 .dynasty__slider .slick-dots .slider-nav {
@@ -1872,6 +2033,26 @@ div:focus {
   margin-top: 50px;
 }
 
+@media (min-width: 576px) {
+  .swiper-dynasty-mobile {
+    margin-top: 0px;
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-dynasty-mobile {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 450px;
+    height: 180px;
+  }
+}
+
 .dynasty-mobile-slide {
   height: auto;
 }
@@ -1894,6 +2075,19 @@ div:focus {
 .animation-dynasty {
   margin-top: 100px;
   position: relative;
+}
+
+@media (min-width: 576px) {
+  .animation-dynasty {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .animation-dynasty {
+    width: 450px;
+    margin-top: 24px;
+  }
 }
 
 .animation-dynasty .ship-dynasty {
@@ -1924,6 +2118,40 @@ div:focus {
   transition: all 0.3s ease;
 }
 
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 650px;
+  }
+}
+
+@-webkit-keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content .modal-body {
+  opacity: 0;
+  -webkit-animation: modal-opacity 0.5s;
+          animation: modal-opacity 0.5s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .modal-content h4 {
   font-family: "MullerBold";
   font-size: 20px;
@@ -1946,6 +2174,400 @@ div:focus {
 
 .modal-content .close i:hover {
   color: black;
+}
+
+.dynasty__desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dynasty__desk .left__content {
+  background-color: #144589;
+  background-image: url("../img/dynasty/left_content/bg_icons.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  width: 56%;
+}
+
+.dynasty__desk .left__content .item {
+  width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item {
+    width: 596px;
+    margin-right: 90px;
+  }
+}
+
+.dynasty__desk .left__content .item h3 {
+  font-family: "Qanelas-SemiBold";
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  margin-top: 76px;
+}
+
+.dynasty__desk .left__content .item h3:after {
+  content: "";
+  width: 158px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+
+.dynasty__desk .left__content .item p {
+  font-family: "MullerRegular";
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: 300;
+  margin-top: 60px;
+}
+
+.dynasty__desk .left__content .item .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 130px;
+}
+
+.dynasty__desk .left__content .item .name__family {
+  position: relative;
+  margin-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 64px;
+  cursor: pointer;
+  margin-top: 26px;
+}
+
+.dynasty__desk .left__content .item .name__family:hover span::after {
+  display: block;
+}
+
+.dynasty__desk .left__content .item .name__family.active span:after {
+  display: block;
+}
+
+.dynasty__desk .left__content .item .name__family img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dynasty__desk .left__content .item .name__family span {
+  font-family: "times-new-roman";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fafafa;
+  position: relative;
+  z-index: 99;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family span {
+    font-size: 17px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/dynasty/left_content/bg_button.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 105%;
+  height: 130%;
+  z-index: -1;
+  display: none;
+}
+
+.dynasty__desk .left__content .item .name__family-ancifer {
+  margin-left: 0px;
+  width: 134px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-ancifer {
+    width: 154px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-nedach {
+  width: 262px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-nedach {
+    width: 232px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-keshinyan {
+  width: 122px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-keshinyan {
+    width: 132px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-georgievi {
+  width: 200px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-georgievi {
+    width: 240px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-chertkovi {
+  width: 290px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-chertkovi {
+    width: 341px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-ogarevi {
+  width: 200px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-ogarevi {
+    width: 220px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-koltunovi {
+  width: 140px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-koltunovi {
+    width: 162px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-stetyuhi {
+  width: 154px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-stetyuhi {
+    width: 164px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-skuratori {
+  width: 300px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-skuratori {
+    width: 336px;
+  }
+}
+
+.dynasty__desk .left__content .item .name__family-torn {
+  width: 200px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .left__content .item .name__family-torn {
+    width: 230px;
+  }
+}
+
+.dynasty__desk .right__content {
+  width: 44%;
+}
+
+.dynasty__desk .right__content .fake {
+  opacity: 0;
+  -webkit-animation: modal-opacity 0.5s;
+          animation: modal-opacity 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.dynasty__desk .right__content .description {
+  display: none;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .right__content .description {
+    padding-left: 50px;
+  }
+}
+
+.dynasty__desk .right__content .description .dynasty__slider {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.dynasty__desk .right__content .description .label-img img {
+  margin-top: 50px;
+}
+
+.dynasty__desk .right__content .description h4 {
+  font-family: "MullerBold";
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 30px;
+  height: 50px;
+}
+
+.dynasty__desk .right__content .description .swiper-dynasty-desk {
+  width: 400px;
+  margin-left: 0px;
+  height: 230px;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+
+@media (min-width: 1200px) {
+  .dynasty__desk .right__content .description .swiper-dynasty-desk {
+    width: 450px;
+    height: 200px;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+.dynasty__desk .right__content .description .swiper-dynasty-desk .dynasty-desk-slide span {
+  font-family: "MullerMedium";
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.dynasty__desk .right__content .description .swiper-dynasty-desk .dynasty-desk-slide p {
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.dynasty__desk .right__content #ancifer {
+  display: block;
+}
+
+.animation-dynasty-desk {
+  margin-top: 0px;
+  position: relative;
+  width: 400px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+@media (min-width: 1200px) {
+  .animation-dynasty-desk {
+    width: 450px;
+  }
+}
+
+.animation-dynasty-desk .ship-dynasty-desk {
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.animation-dynasty-desk .progress-dynasty-desk {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #f8f7f2;
+}
+
+.animation-dynasty-desk .progress-dynasty-desk .bar-dynasty-desk {
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #1d6098;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.right__content .dynasty__slider .slider-for .item .img {
+  width: 300px;
+  height: 220px;
+}
+
+.right__content .dynasty__slider .slider-for .item .img::before {
+  top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .right__content .dynasty__slider .slider-for .item .img {
+    width: 100%;
+    height: 270px;
+  }
+  .right__content .dynasty__slider .slider-for .item .img:before {
+    top: 0px;
+  }
+}
+
+.right__content .dynasty__slider .slider-nav {
+  max-width: 180px;
+  right: -270px;
+  top: -165px;
+}
+
+@media (min-width: 1200px) {
+  .right__content .dynasty__slider .slider-nav {
+    right: -350px;
+    top: -175px;
+  }
 }
 
 .footer {
