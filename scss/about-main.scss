@@ -1,0 +1,32 @@
+.about-main {
+  background: url(../img/about-main/bg.png);
+  background-size: cover;
+  background-position: 35% 50%;
+  @media (min-width: 768px) {
+    height: 400px;
+    background-position: 50% 100%;
+  }
+  @media (min-width: 992px) {
+    height: 420px;
+  }
+  &__content {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      margin-top: 230px;
+    }
+    & h1 {
+      font-family: "Qanelas-SemiBold";
+      font-size: 32px;
+      line-height: 45px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: bold;
+      @media (min-width: 768px) {
+        font-size: 36px;
+      }
+    }
+  }
+}

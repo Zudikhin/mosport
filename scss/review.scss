@@ -1,0 +1,208 @@
+.reviews {
+  position: relative;
+  @media (min-width: 1200px) {
+    margin-top: 100px;
+  }
+  &__for {
+    height: 600px;
+    position: relative;
+    @media (min-width: 768px) {
+      height: 350px;
+    }
+    @media (min-width: 992px) {
+      height: 500px;
+    }
+    @media (min-width: 1200px) {
+      height: auto;
+    }
+    &_content {
+      & .item {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+        & .text {
+          background-color: #f8f7f2;
+          padding: 20px 20px 60px 20px;
+          @media (min-width: 425px) {
+            padding: 20px 20px 75px 20px;
+          }
+          @media (min-width: 992px) {
+            padding: 100px 20px 60px 20px;
+          }
+          @media (min-width: 1200px) {
+            width: 60%;
+          }
+          & h4 {
+            font-size: 20px;
+            line-height: 20px;
+            color: #1c1c1c;
+          }
+          & .private {
+            @media (min-width: 1200px) {
+              margin-top: 16px;
+            }
+            & span {
+              font-family: "MullerMedium";
+              font-size: 16px;
+              line-height: 16px;
+              color: #333333;
+              &:last-child {
+                margin-left: 20px;
+              }
+            }
+          }
+          & p {
+            font-family: "Qanelas-SemiBold";
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            margin-top: 20px;
+            @media (min-width: 1200px) {
+              width: 550px;
+              margin-top: 30px;
+            }
+          }
+        }
+        & .img {
+          width: 100%;
+          height: 358px;
+          @media (min-width: 425px) {
+            height: 450px;
+          }
+          @media (min-width: 664px) {
+            height: 550px;
+          }
+          @media (min-width: 768px) {
+            height: 350px;
+          }
+          @media (min-width: 992px) {
+            height: 500px;
+          }
+          @media (min-width: 1200px) {
+            width: 40%;
+            height: auto;
+          }
+          & img {
+            height: 100%;
+            width: 100%;
+            @media (min-width: 768px) {
+              width: auto;
+            }
+            @media (min-width: 1200px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__nav {
+    display: none;
+    & .item {
+      & img {
+        width: 100%;
+        height: 352px;
+      }
+    }
+    @media (min-width: 768px) {
+      display: block;
+    }
+    @media (min-width: 1200px) {
+      transform: translateY(-7px);
+    }
+  }
+}
+.reviews__btns-mobile {
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+  z-index: 99;
+  left: 20px;
+  @media (min-width: 380px) {
+    bottom: -10px;
+  }
+  @media (min-width: 425px) {
+    bottom: -80px;
+  }
+  @media (min-width: 525px) {
+    bottom: -60px;
+  }
+  @media (min-width: 664px) {
+    bottom: -140px;
+  }
+  @media (min-width: 768px) {
+    bottom: 30px;
+    left: 380px;
+  }
+  @media (min-width: 992px) {
+    left: 520px;
+    bottom: 50px;
+  }
+  @media (min-width: 1200px) {
+    left: 42%;
+  }
+}
+.review__btn-next {
+  width: 56px;
+  height: 14px;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+    &:first-child {
+      display: block;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  &:hover {
+    & button {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.review__btn-prev {
+  width: 56px;
+  height: 14px;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+    &:first-child {
+      display: block;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  &:hover {
+    & button {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}

@@ -28,6 +28,34 @@ $(document).ready(function () {
     },
   });
 
+  $(".reviews__for_content").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".reviews__nav",
+  });
+  $(".reviews__nav").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: ".reviews__for_content",
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    variableWidth: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
+  });
+
+  $(".review__btn-next").click(function () {
+    $(".reviews__for_content").slick("slickNext");
+  });
+
+  $(".review__btn-prev").click(function () {
+    $(".reviews__for_content").slick("slickPrev");
+  });
+
   swiper.on("slideChange", function () {
     var dropProgress = $(this)[0].progress;
     var progress = dropProgress * 100;
@@ -55,7 +83,7 @@ $(document).ready(function () {
   });
 
   $(".main__slider").slick({
-    infinite: true,
+    infinite: false,
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: false,
@@ -80,7 +108,7 @@ $(document).ready(function () {
     prevArrow: $(".news__slider-prev"),
     nextArrow: $(".news__slider-next"),
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1500,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -109,7 +137,7 @@ $(document).ready(function () {
     nextArrow: $(".about__slider-next"),
     infinite: true,
     speed: 300,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1500,
     pauseOnHover: false,
     pauseOnFocus: false,

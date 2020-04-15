@@ -205,3 +205,36 @@
     }
   }
 }
+
+.header-other {
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  & .header__mobile {
+    &__btn {
+      & span {
+        background-color: white;
+      }
+      &.active {
+        & span {
+          background-color: black;
+          &:nth-child(2) {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  & .header__content {
+    & .header__desktop {
+      & ul {
+        & li {
+          & a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

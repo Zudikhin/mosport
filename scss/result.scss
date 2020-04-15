@@ -1,0 +1,39 @@
+.result {
+  background-color: #003d7b;
+  padding: 50px 0px;
+  @media (min-width: 992px) {
+    padding: 114px 0px 88px 0px;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 80%;
+    @media (min-width: 576px) {
+      width: 100%;
+    }
+    & span {
+      font-family: "MullerBold";
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 70px;
+      text-align: center;
+      color: #f8f7f2;
+    }
+    & p {
+      font-family: "Lato-Regular";
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #ffffff;
+      @media (min-width: 768px) {
+        width: 100%;
+        margin-top: 10px;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
