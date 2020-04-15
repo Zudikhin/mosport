@@ -1,0 +1,17 @@
+@keyframes opacitybulger {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-main__content-title {
+  display: none;
+  &.active {
+    animation: opacitybulger 0.5s;
+    animation-timing-function: ease;
+    display: block;
+  }
+}
