@@ -15,7 +15,7 @@
       margin-left: auto;
       margin-right: auto;
       @media (min-width: 1200px) {
-        width: 596px;
+        width: 620px;
         margin-right: 90px;
       }
       & h3 {
@@ -56,9 +56,20 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 64px;
           cursor: pointer;
+          padding: 20px;
+          box-sizing: border-box;
           margin-top: 26px;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../img/dynasty/left_content/button/4.png);
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+          }
           &:hover {
             & span {
               &::after {
@@ -107,67 +118,6 @@
               height: 130%;
               z-index: -1;
               display: none;
-            }
-          }
-          &-ancifer {
-            margin-left: 0px;
-            width: 134px;
-            @media (min-width: 1200px) {
-              width: 154px;
-            }
-          }
-          &-nedach {
-            width: 262px;
-            @media (min-width: 1200px) {
-              width: 232px;
-            }
-          }
-          &-keshinyan {
-            width: 122px;
-            @media (min-width: 1200px) {
-              width: 132px;
-            }
-          }
-          &-georgievi {
-            width: 200px;
-            @media (min-width: 1200px) {
-              width: 240px;
-            }
-          }
-          &-chertkovi {
-            width: 290px;
-            @media (min-width: 1200px) {
-              width: 341px;
-            }
-          }
-          &-ogarevi {
-            width: 200px;
-            @media (min-width: 1200px) {
-              width: 220px;
-            }
-          }
-          &-koltunovi {
-            width: 140px;
-            @media (min-width: 1200px) {
-              width: 162px;
-            }
-          }
-          &-stetyuhi {
-            width: 154px;
-            @media (min-width: 1200px) {
-              width: 164px;
-            }
-          }
-          &-skuratori {
-            width: 300px;
-            @media (min-width: 1200px) {
-              width: 336px;
-            }
-          }
-          &-torn {
-            width: 200px;
-            @media (min-width: 1200px) {
-              width: 230px;
             }
           }
         }

@@ -52,6 +52,19 @@
       &__item {
         position: relative;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 25px 5px;
+        &:before {
+          content: "";
+          background: url(../img/dynasty/left_content/button/4.png);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+        }
         @media (min-width: 400px) {
           width: 370px;
         }
@@ -63,22 +76,14 @@
           }
         }
         margin-top: 25px;
-        & img {
-          width: 100%;
-        }
         & span {
-          position: absolute;
-          display: block;
-          text-align: center;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          margin: 0 auto;
           font-family: "times-new-roman";
           font-size: 17px;
           line-height: 20px;
           text-transform: uppercase;
           color: #ffffff;
+          position: relative;
+          z-index: 1;
           &:before {
             content: "";
             position: absolute;
@@ -96,43 +101,6 @@
         }
       }
     }
-  }
-}
-
-.family_two {
-  & span {
-    width: 200px;
-  }
-}
-.family_four {
-  & span {
-    width: 250px;
-  }
-}
-.family_five {
-  & span {
-    width: 320px;
-    &:before {
-      width: 110% !important;
-    }
-  }
-}
-.family_six {
-  & span {
-    width: 220px;
-  }
-}
-.family_nine {
-  & span {
-    width: 320px;
-    &:before {
-      width: 110% !important;
-    }
-  }
-}
-.family_ten {
-  & span {
-    width: 70px;
   }
 }
 

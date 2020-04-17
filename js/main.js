@@ -14,12 +14,12 @@ $(document).ready(function () {
     }
   });
 
-  $(".drop_item-mob").click(function () {
-    $(this).toggleClass("active");
-    $(".drop_downmenu-mob").toggleClass("active");
-  });
+  // $(".drop_item-mob").click(function () {
+  //   $(this).toggleClass("active");
+  //   $(".drop_downmenu-mob").toggleClass("active");
+  // });
 
-  $(".dropdown_item-desk").click(function () {
+  $(".dropdown_item-desk").hover(function () {
     $(this).toggleClass("active");
     $(".drop_downmenu-desk").toggleClass("active");
   });
@@ -318,6 +318,12 @@ $(document).ready(function () {
     $(".slider-nav").slick("slickPrev");
   });
 
+  setTimeout(function () {
+    $(".name__family").first().trigger("click");
+  }, 10);
+
+  //$(".name__family")[2].trigger("click");
+
   $(".name__family").click(function () {
     $(".name__family").removeClass("active");
     $(this).addClass("active");
@@ -336,14 +342,25 @@ $(document).ready(function () {
     });
   });
 
-  $(".centre__list-item").click(function (e) {
-    e.preventDefault();
-    $(".centre__list-item").removeClass("active");
-    $(this).addClass("active");
-    var id = $(this).attr("id");
-    $(".centre__info .content").removeClass("active");
-    $(".centre__info .content[data-target=" + id + "]").addClass("active");
-    $(".about-main__content-title").removeClass("active");
-    $(".about-main__content-title[data-target=" + id + "]").addClass("active");
-  });
+  $("#theme-phone").mask("+7 (999)999-99-99");
+
+  // $(".centre__list-item").click(function (e) {
+  //   e.preventDefault();
+  //   $(".centre__list-item").removeClass("active");
+  //   $(this).addClass("active");
+  //   var id = $(this).attr("id");
+  //   $(".centre__info .content").removeClass("active");
+  //   $(".centre__info .content[data-target=" + id + "]").addClass("active");
+  //   $(".about-main__content-title").removeClass("active");
+  //   $(".about-main__content-title[data-target=" + id + "]").addClass("active");
+  // });
+
+  // $(".shift__list-item").click(function (e) {
+  //   e.preventDefault();
+  //   $(".shift__list-item").removeClass("active");
+  //   $(this).addClass("active");
+  //   var id = $(this).attr("id");
+  //   $(".shift__info .content").removeClass("active");
+  //   $(".shift__info .content[data-target=" + id + "]").addClass("active");
+  // });
 });

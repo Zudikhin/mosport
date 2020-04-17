@@ -9,7 +9,17 @@
   font-style: normal;
   font-weight: normal;
 }
-
+@font-face {
+  font-family: "MullerUltraLight";
+  src: url("../fonts/MullerUltraLight.eot");
+  src: url("../fonts/MullerUltraLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MullerUltraLight.woff2") format("woff2"),
+    url("../fonts/MullerUltraLight.woff") format("woff"),
+    url("../fonts/MullerUltraLight.ttf") format("truetype"),
+    url("../fonts/MullerUltraLight.svg#MullerUltraLight") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
 @font-face {
   font-family: "MullerBold";
   src: url("../fonts/MullerBold.eot");

@@ -264,7 +264,7 @@
   }
 }
 .drop_downmenu-mob {
-  display: none;
+  display: block;
   & ul {
     animation: 1s ease 0s normal forwards 1 fadein;
     margin-top: 20px;

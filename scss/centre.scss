@@ -61,7 +61,7 @@
     & .content {
       padding: 0px 20px;
       margin: 30px 0px;
-      display: none;
+      display: block;
       @media (min-width: 1200px) {
         width: 804px;
         padding: 40px 0px 50px 32px;
@@ -75,10 +75,13 @@
       & h2 {
         font-weight: 500;
         font-family: "Qanelas-SemiBold";
-        font-size: 34px;
+        font-size: 30px;
         line-height: 41px;
         text-transform: uppercase;
         color: #000000;
+        @media (min-width: 1200px) {
+          font-size: 34px;
+        }
       }
       & span {
         font-family: "MullerRegular";

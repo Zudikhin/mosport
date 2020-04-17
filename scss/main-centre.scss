@@ -8,7 +8,7 @@
 }
 
 .about-main__content-title {
-  display: none;
+  display: block;
   &.active {
     animation: opacitybulger 0.5s;
     animation-timing-function: ease;
