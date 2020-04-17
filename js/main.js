@@ -344,6 +344,29 @@ $(document).ready(function () {
 
   $("#theme-phone").mask("+7 (999)999-99-99");
 
+  $(".news-details__cat-ship .item").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        background:
+          "linear-gradient(0deg, rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6)), url(" +
+          $(this).data("bg") +
+          ")",
+        "background-repeat": "no-repeat",
+        "background-size": "100% 100%",
+      });
+    }
+  });
+
+  $(".other-news__content h4").each(function () {
+    var defaultText = $(this)[0].innerHTML;
+    if (defaultText.length > 40) {
+      var shortText =
+        $.trim(defaultText).substring(0, 30).split(" ").slice(0, -1).join(" ") +
+        "...";
+      $(this).text(shortText);
+    }
+  });
+
   // $(".centre__list-item").click(function (e) {
   //   e.preventDefault();
   //   $(".centre__list-item").removeClass("active");

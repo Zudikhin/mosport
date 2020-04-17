@@ -1,0 +1,30 @@
+.other-news-all {
+  margin-top: 0px;
+  .arrow {
+    background-color: #00b7c6;
+  }
+  & .post-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    @media (min-width: 992px) {
+      margin-top: 60px;
+      padding-bottom: 50px;
+    }
+    & a {
+      width: 55px;
+      height: 55px;
+      background-color: #1d6098;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin-right: 20px;
+      line-height: 55px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
