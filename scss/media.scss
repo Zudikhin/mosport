@@ -236,21 +236,79 @@
 }
 
 .media-video {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (min-width: 992px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
   & .main__video {
     & video {
       width: 100%;
       object-fit: cover;
     }
+    & span {
+      font-family: "MullerRegular";
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+      opacity: 0.5;
+      display: block;
+      margin-top: 15px;
+    }
+    & h4 {
+      font-family: "MullerMedium";
+      font-size: 28px;
+      line-height: 36px;
+      color: #333333;
+      margin-top: 10px;
+      @media (min-width: 992px) {
+        margin-top: 20px;
+      }
+    }
   }
 }
 
 .other-video {
-  height: 200px;
-  overflow: scroll;
+  height: 400px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (min-width: 992px) {
+    transform: translateY(-20px);
+    margin-top: 0px;
+    height: 464px;
+  }
   & .item {
     & video {
       width: 100%;
       object-fit: cover;
+      @media (min-width: 992px) {
+        margin-top: 20px;
+      }
+    }
+    & span {
+      font-family: "MullerRegular";
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+      opacity: 0.5;
+      display: block;
+      margin-top: 15px;
+    }
+    & h4 {
+      font-family: "MullerMedium";
+      font-size: 28px;
+      line-height: 36px;
+      color: #333333;
+      margin-top: 10px;
+      @media (min-width: 992px) {
+        margin-top: 10px;
+      }
     }
   }
 }

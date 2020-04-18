@@ -403,6 +403,37 @@ $(document).ready(function () {
     $("#imagemodal").modal("show");
   });
 
+  $(".other-video .item").click(function () {
+    var link = $(this).children();
+    $(".main__video").empty();
+    link.clone().appendTo(".main__video");
+    $(".main__video video").attr("controls", "controls");
+    $(".main__video video")[0].play();
+
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(".main__video").offset().top - $(window).height() / 2,
+      },
+      1000
+    );
+  });
+
+  var $window = $(window);
+
+  $window.scroll(function () {
+    var $video = $(".main__video video");
+    var $topOfVideo = $video.offset().top;
+    var $bottomOfVideo = $video.offset().top + $video.outerHeight();
+
+    var $topOfScreen = $window.scrollTop();
+    var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
+    if ($bottomOfScreen > $bottomOfVideo && $topOfScreen < $topOfVideo) {
+      $video[0].play();
+    } else {
+      $video[0].pause();
+    }
+  });
+
   // $(".elements-gride").isotope({
   //   itemSelector: ".element-item",
   //   masonry: {
