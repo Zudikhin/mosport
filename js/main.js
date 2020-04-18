@@ -434,6 +434,10 @@ $(document).ready(function () {
     }
   });
 
+  $(".contacts__item").click(function () {
+    $(this).toggleClass("active");
+  });
+
   // $(".elements-gride").isotope({
   //   itemSelector: ".element-item",
   //   masonry: {

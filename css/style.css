@@ -5065,6 +5065,178 @@ figure {
   }
 }
 
+@-webkit-keyframes textFaq {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFaq {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contacts {
+  margin-bottom: 50px;
+}
+
+.contacts__content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.contacts__content span {
+  font-family: "MullerBold";
+  font-size: 18px;
+  line-height: 18px;
+  color: #1c1c1c;
+  margin-top: 20px;
+  display: block;
+}
+
+.contacts__content span a {
+  font-family: "MullerBold";
+  font-size: 18px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+.contacts__content p {
+  font-family: "MullerUltraLight";
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.contacts__content h3 {
+  font-family: "MullerBold";
+  font-size: 30px;
+  line-height: 24px;
+  color: #1c1c1c;
+  text-transform: none;
+  margin-top: 30px;
+}
+
+.contacts__item {
+  background: #fafafa;
+  display: inline-block;
+  margin-top: 30px;
+  cursor: pointer;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0px 10px 10px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 992px) {
+  .contacts__item {
+    padding: 28px 0px 28px 20px;
+  }
+}
+
+.contacts__item h4 {
+  font-family: "MullerBold";
+  font-size: 18px;
+  line-height: 24px;
+  color: #1c1c1c;
+  width: 85%;
+}
+
+@media (min-width: 576px) {
+  .contacts__item h4 {
+    width: 90%;
+  }
+}
+
+.contacts__item p {
+  font-family: "MullerRegular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  display: none;
+  -webkit-animation-name: textFaq;
+          animation-name: textFaq;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  width: 90%;
+}
+
+.contacts__item button {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .contacts__item button {
+    top: 40px;
+    right: 20px;
+  }
+}
+
+.contacts__item button:before, .contacts__item button:after {
+  content: "";
+  position: absolute;
+  background-color: #00b7c6;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.contacts__item button:before {
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  margin-left: -2px;
+}
+
+.contacts__item button:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: -2px;
+}
+
+.contacts__item.active p {
+  display: block;
+}
+
+.contacts__item.active button:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contacts__item.active button:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .footer {
   background-image: url(../img/footer/bg.png);
   background-size: cover;

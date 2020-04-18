@@ -1,0 +1,134 @@
+@keyframes textFaq {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contacts {
+  margin-bottom: 50px;
+  &__content {
+    & .info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    & span {
+      font-family: "MullerBold";
+      font-size: 18px;
+      line-height: 18px;
+      color: #1c1c1c;
+      margin-top: 20px;
+      display: block;
+      & a {
+        font-family: "MullerBold";
+        font-size: 18px;
+        line-height: 18px;
+        color: #1c1c1c;
+      }
+    }
+    & p {
+      font-family: "MullerUltraLight";
+      font-size: 18px;
+      line-height: 18px;
+      color: #000000;
+      margin-top: 10px;
+    }
+    & h3 {
+      font-family: "MullerBold";
+      font-size: 30px;
+      line-height: 24px;
+      color: #1c1c1c;
+      text-transform: none;
+      margin-top: 30px;
+    }
+  }
+  &__item {
+    background: #fafafa;
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    @media (min-width: 992px) {
+      padding: 28px 0px 28px 20px;
+    }
+    & h4 {
+      font-family: "MullerBold";
+      font-size: 18px;
+      line-height: 24px;
+      color: #1c1c1c;
+      width: 85%;
+      @media (min-width: 576px) {
+        width: 90%;
+      }
+    }
+    & p {
+      font-family: "MullerRegular";
+      font-size: 16px;
+      line-height: 24px;
+      color: #000000;
+      display: none;
+      animation-name: textFaq;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      width: 90%;
+    }
+    & button {
+      position: absolute;
+      top: 30px;
+      right: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      border: none;
+      @media (min-width: 992px) {
+        top: 40px;
+        right: 20px;
+      }
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: #00b7c6;
+        transition: transform 0.25s ease-out;
+      }
+      &:before {
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        margin-left: -2px;
+      }
+      &:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        margin-top: -2px;
+      }
+    }
+  }
+}
+
+.contacts {
+  &__item {
+    &.active {
+      & p {
+        display: block;
+      }
+      & button {
+        &:before {
+          transform: rotate(90deg);
+        }
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
