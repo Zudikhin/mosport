@@ -5022,11 +5022,13 @@ figure {
 
 @media (min-width: 992px) {
   .other-video {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
     margin-top: 0px;
     height: 464px;
   }
+}
+
+.other-video .item {
+  cursor: pointer;
 }
 
 .other-video .item video {
@@ -5098,6 +5100,19 @@ figure {
   margin-top: 20px;
 }
 
+@media (min-width: 992px) {
+  .contacts__content .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 40px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .contacts__content span {
   font-family: "MullerBold";
   font-size: 18px;
@@ -5122,13 +5137,10 @@ figure {
   margin-top: 10px;
 }
 
-.contacts__content h3 {
-  font-family: "MullerBold";
-  font-size: 30px;
-  line-height: 24px;
-  color: #1c1c1c;
-  text-transform: none;
-  margin-top: 30px;
+@media (min-width: 992px) {
+  .contacts__content p {
+    margin-top: 36px;
+  }
 }
 
 .contacts__item {
@@ -5235,6 +5247,15 @@ figure {
 .contacts__item.active button:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.contacts__faq-title {
+  font-family: "MullerBold";
+  text-transform: none;
+  font-size: 30px;
+  line-height: 24px;
+  color: #1c1c1c;
+  margin-top: 50px;
 }
 
 .footer {
