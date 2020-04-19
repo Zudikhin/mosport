@@ -146,3 +146,67 @@
     }
   }
 }
+
+.main {
+  & .slick-vertical .slick-slide {
+    height: 100vh;
+    border: none;
+  }
+}
+
+@keyframes slideBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main__slider-info {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  background-color: rgba(190, 218, 250, 0.08);
+  animation-name: slideBlock;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  display: none;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 20px 0px 30px 30px;
+  @media (min-width: 768px) {
+    left: auto;
+    right: 10%;
+    top: 25%;
+  }
+  @media (min-width: 992px) {
+    padding: 0px 30px 30px 30px;
+  }
+  @media (min-width: 1200px) {
+    top: 30%;
+  }
+  &.active {
+    display: block;
+  }
+  & .item {
+    & span {
+      font-family: "MullerBold";
+      font-size: 36px;
+      line-height: 36px;
+      color: #ffffff;
+      margin-top: 10px;
+      display: block;
+      @media (min-width: 992px) {
+        margin-top: 40px;
+      }
+    }
+    & p {
+      font-family: "MullerUltraLight";
+      font-size: 16px;
+      line-height: 16px;
+      color: #ffffff;
+      margin-top: 15px;
+    }
+  }
+}

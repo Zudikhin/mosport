@@ -14,11 +14,6 @@ $(document).ready(function () {
     }
   });
 
-  // $(".drop_item-mob").click(function () {
-  //   $(this).toggleClass("active");
-  //   $(".drop_downmenu-mob").toggleClass("active");
-  // });
-
   $(".dropdown_item-desk").hover(function () {
     $(this).toggleClass("active");
     $(".drop_downmenu-desk").toggleClass("active");
@@ -101,7 +96,7 @@ $(document).ready(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         background: "url(" + $(this).data("bg") + ")",
-        "background-position": "50% 0%",
+        "background-position": "50% 30%",
         "background-repeat": "no-repeat",
         "background-size": "cover",
       });
@@ -115,13 +110,35 @@ $(document).ready(function () {
     pauseOnHover: false,
     pauseOnFocus: false,
     speed: 500,
-    fade: true,
     cssEase: "linear",
+    vertical: true,
     dots: true,
     customPaging: function (slider, i) {
       return '<a class="dot"></a>';
     },
   });
+
+  $(".main__slider").on("afterChange", function (event, slick, currentSlide) {
+    var itemLength = $(".main__item").length - 1;
+    if (currentSlide == 1) {
+      $(".main__slider-info").addClass("active");
+    } else if (itemLength == currentSlide) {
+      $(".main__slider").slick(
+        "slickSetOption",
+        {
+          autoplay: false,
+        },
+        false
+      );
+    }
+  });
+
+  // $(".main__slider").onAfterChange:function (slide, index) {
+  //   if (index == 4) {
+  //     $$(".main__slider").slickPause();
+  //   }
+  // },
+  // onAfterChange:
 
   $(".header__fake-modal").click(function () {
     $(this).css("display", "none");
@@ -289,13 +306,22 @@ $(document).ready(function () {
   });
 
   $(".modal-content").each(function () {
-    if ($(window).width() <= 767) {
+    if ($(window).width() <= 576) {
       if ($(this).attr("data-bg")) {
         $(this).css({
           background: "#00b7c6 url(" + $(this).data("bg") + ")",
           "background-position": "100px bottom",
           "background-repeat": "no-repeat",
-          "background-size": "100% 50%",
+          "background-size": "100% 40%",
+        });
+      }
+    } else if ($(window).width() > 576 && $(window).width() <= 767) {
+      if ($(this).attr("data-bg")) {
+        $(this).css({
+          background: "#00b7c6 url(" + $(this).data("bg") + ")",
+          "background-position": "100px bottom",
+          "background-repeat": "no-repeat",
+          "background-size": "100% 60%",
         });
       }
     } else {
